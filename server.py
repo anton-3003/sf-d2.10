@@ -7,8 +7,8 @@ from sentry_sdk.integrations.bottle import BottleIntegration
 config = configparser.ConfigParser()
 config.read('settings.ini')
 
-# sentry_link = config["MySet"]['DSN']
-sentry_link = None
+sentry_link = config["MySet"]['DSN']
+
 
 sentry_sdk.init(
     dsn=sentry_link,
